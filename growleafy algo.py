@@ -106,7 +106,6 @@ def getAllTanaman():
         "Deskripsi", "Harga", "Stok"
     ])
 
-
 def tampilkanKatalog():
     data = getAllTanaman()
     if data.empty:
@@ -410,7 +409,6 @@ def getAllKategori():
         ORDER BY id_kategori
     """, kolom=["ID Kategori", "Nama Kategori"])
 
-
 def tampilkanKategori():
     data = getAllKategori()
     print("\n========== DATA KATEGORI ==========")
@@ -649,7 +647,6 @@ def laporanPenjualan():
             print("Produk terlaris        : Belum ada data")
             print("Produk kurang laris    : Belum ada data")
 
-        # Menggabungkan laporan penjualan, produk terlaris, dan kurang laris dalam satu CSV.
         baris_csv = []
         baris_csv.append(["LAPORAN HASIL PENJUALAN", judul])
         baris_csv.append(["Jumlah pesanan selesai", jumlah_pesanan])
@@ -679,7 +676,6 @@ def laporanPenjualan():
         print("Gagal membuat laporan:", error)
     finally:
         tutupKoneksi(conn, cur)
-
 
 def produkTerlaris():
     data = ambilData("""
@@ -812,7 +808,6 @@ def menuUtama():
 
         if pilihan != "2":
             jeda()
-
 
 if __name__ == "__main__":
     menuUtama()
